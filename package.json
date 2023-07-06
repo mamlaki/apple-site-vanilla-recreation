@@ -1,10 +1,12 @@
 {
-  "name": "apple-site-vanilla-recreation",
+  "name": "Strawberry",
   "version": "1.0.0",
-  "description": "A recreation of (most of) apple.com using HTML, CSS, and vanilla JS.",
-  "main": "index.js",
+  "description": "A recreation/reimagination of (most of) apple.com using HTML, CSS, and vanilla JS.",
+  "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/mamlaki/apple-site-vanilla-recreation/issues"
   },
-  "homepage": "https://github.com/mamlaki/apple-site-vanilla-recreation#readme"
+  "homepage": "https://github.com/mamlaki/apple-site-vanilla-recreation#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
 }
