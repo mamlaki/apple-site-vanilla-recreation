@@ -1,6 +1,11 @@
 /* Variables / Psuedo */
+:root {
+    --normal-black: rgba(0, 0, 0, 0.8);
+}
+
 
 /* || Document / General */
+/* ------------- */
 html {
     font-size: 62.5%;
     height: 100vh;
@@ -17,19 +22,28 @@ h2 {
     color: rgba(0, 0, 0, 0.9);
 }
 
-p {
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: lighter;
+h2 {
+    font-size: 3rem;
 }
 
+p {
+    color: var(--normal-black);
+    font-weight: lighter;
+}
+/* ------------- */
+
+
+
 /* || Header */
+/* ------------- */
 .main-header {
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+    z-index: 4;
 }
 
 .main-header > * {
@@ -40,8 +54,12 @@ p {
     display: flex;
     gap: 1rem;
 }
+/* ------------- */
+
+
 
 /* || Main - Home Page */
+/* ------------- */
 .home {
     text-align: center;
 }
@@ -54,11 +72,9 @@ p {
 }
 
 .home article {
-    /* width: 68%; */
     display: grid;
     grid-template-rows: 1fr 1fr;
     background-color: ghostwhite;
-    /* padding: 14rem; */
     margin: auto auto 1.5rem auto;
 }
 
@@ -74,6 +90,10 @@ p {
     margin: 0 auto;
 }
 
+.home article p:first-of-type {
+    margin-top: -1rem;
+}
+
 .logo-w-title {
     display: flex;
     flex-direction: row;
@@ -81,8 +101,12 @@ p {
     align-items: center;
     width: 100%;
 }
+/* ------------- */
+
+
 
 /* || Articles - Home Page */
+/* ------------- */
 .article-buttons {
     position: relative;
     text-decoration: none;
@@ -95,7 +119,7 @@ p {
     z-index: 1;
 }
 
-/* Linear Gradient Transition Workaround for Firefox */
+/* || Linear Gradient Transition Workaround for Firefox */
 /* ------------- */
 .article-buttons::after {
     position: absolute;
@@ -116,7 +140,7 @@ p {
 }
 
 .article-buttons:active::after {
-    background: red;
+    background: #ff5b5b;
 }
 
 .article-buttons span {
@@ -124,3 +148,61 @@ p {
     z-index: 3;
 }
 /* ------------- */
+/* ------------- */
+
+
+/* || Footer */
+/* ------------- */
+footer {
+    font-size: 1.3rem;
+    padding: 0 2rem 1rem 2rem;
+}
+
+footer hr {
+    margin: 2rem auto;
+}
+
+footer:not(.country-selection),
+address {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.site-map {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.site-map * {
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+}
+
+.country-selection {
+    margin: 1rem 0;
+}
+
+.other-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+footer a:not(address a),
+.other-links {
+    color: var(--normal-black);
+    text-decoration: none;
+}
+
+footer a:hover,
+.other-links a:hover {
+    text-decoration: underline;
+}
+
+.note {
+    font-size: 1.0rem;
+}
