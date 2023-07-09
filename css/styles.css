@@ -1,0 +1,78 @@
+/* Document Styles */
+html {
+    font-size: 62.5%;
+    height: 100vh;
+    scrollbar-color: red; 
+    scrollbar-width: thin; 
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    overflow: scroll;
+}
+
+/* Header Styles */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.main-header > * {
+    margin: 0 1rem;
+}
+
+.other-header-elements {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Main Styles - Home Page */
+
+.home {
+    margin: 2.4rem auto;
+    text-align: center;
+}
+
+.home article > div {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1;
+    margin-top: -8rem;
+}
+
+.home article {
+    /* width: 68%; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: ghostwhite;
+    padding: 14rem;
+    margin: 1.5rem auto;
+}
+
+.home .initial-articles article:first-of-type {
+    margin-top: -2rem;
+}
+
+.home article div:not(.logo-w-title) {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-w-title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.article-buttons {
+    text-decoration: none;
+    color: palevioletred;
+    padding: 1rem;
+}
