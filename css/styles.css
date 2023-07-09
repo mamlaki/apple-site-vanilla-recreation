@@ -9,6 +9,7 @@
 html {
     font-size: 62.5%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 body {
@@ -156,6 +157,7 @@ p {
 footer {
     font-size: 1.3rem;
     padding: 0 2rem 1rem 2rem;
+    background-color: #F7F7F7;
 }
 
 footer hr {
@@ -174,7 +176,14 @@ address {
 }
 
 .site-map * {
-    margin-bottom: 1rem;
+    padding: 1rem 0;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+}
+
+.site-map *:nth-child(even) {
+    background-color: #E3E2E2;
 }
 
 address {
