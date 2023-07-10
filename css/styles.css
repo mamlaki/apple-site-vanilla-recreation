@@ -1,6 +1,7 @@
 /* Variables / Psuedo */
 :root {
     --normal-black: rgba(0, 0, 0, 0.8);
+    --logo-black: rgb(51, 51, 51);
 }
 
 
@@ -52,14 +53,33 @@ p {
     margin: 0 1rem;
 }
 
-.logo {
+.header-logo {
     max-width: 30px;
     max-height: 30px;
 }
 
+.search-icon {
+    max-width: 28px;
+    max-height: 28px;
+}
+
 .other-header-elements {
     display: flex;
+    align-items: center;
     gap: 1rem;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--logo-black);
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+}
+
+.hamburger-menu:hover,
+.search-icon:hover {
+    cursor: pointer;
 }
 /* ------------- */
 
@@ -107,6 +127,7 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 0.5rem;
 }
 /* ------------- */
 
@@ -147,7 +168,7 @@ p {
 }
 
 .article-buttons:active::after {
-    background: #ff5b5b;
+    background: #FF5B5B;
 }
 
 .article-buttons span {
