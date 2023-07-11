@@ -67,8 +67,8 @@ p {
 
 .other-header-icons {
     display: flex;
-    align-items: center;
-    gap: 2.6rem;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .hamburger-menu div {
@@ -79,8 +79,13 @@ p {
     margin: 0.5rem 0;
 }
 
-.hamburger-menu:hover,
-.search-icon:hover {
+.icon-container {
+    padding: 1rem;
+}
+
+.icon-container:hover {
+    background-color: whitesmoke;
+    border-radius: 2rem;
     cursor: pointer;
 }
 /* ------------- */
@@ -105,6 +110,15 @@ p {
     grid-template-rows: 1fr 1fr;
     background-color: ghostwhite;
     margin: auto auto 1.5rem auto;
+}
+
+.home .dark-article {
+    background-color: black;
+}
+
+.home .dark-article h2,
+.home .dark-article p {
+    color: white;
 }
 
 .home article > * {
