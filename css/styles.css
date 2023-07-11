@@ -198,24 +198,21 @@ p {
 /* || Footer */
 /* ------------- */
 footer {
-    font-size: 1.3rem;
-    padding: 0 2rem 1rem 2rem;
-    background-color: #F7F7F7;
+    font-size: 1.4rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
-footer hr {
-    margin: 2rem auto;
-}
-
-footer:not(.country-selection),
-address {
-    color: rgba(0, 0, 0, 0.6);
+footer > * {
+    margin: 3rem;
 }
 
 .site-map {
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .site-map * {
@@ -223,10 +220,6 @@ address {
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
-}
-
-.site-map *:nth-child(even) {
-    background-color: #E3E2E2;
 }
 
 address {
@@ -237,24 +230,19 @@ address {
     margin: 1rem 0;
 }
 
-.other-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-}
-
-footer a:not(address a),
-.other-links {
-    color: var(--normal-black);
+footer a:not(address a) {
+    color: white;
     text-decoration: none;
 }
 
-footer a:hover,
-.other-links a:hover {
+footer a:hover {
     text-decoration: underline;
 }
 
 .note {
     font-size: 1.0rem;
+}
+
+.copyright p {
+    color: white;
 }
