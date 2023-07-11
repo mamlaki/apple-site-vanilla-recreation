@@ -45,7 +45,7 @@ p {
     padding: 0.6rem;
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(244, 244, 244, 0.8);
     backdrop-filter: blur(10px);
     z-index: 4;
 }
@@ -84,7 +84,7 @@ p {
 }
 
 .icon-container:hover {
-    background-color: whitesmoke;
+    background-color: #EDEDED;
     border-radius: 2rem;
     cursor: pointer;
 }
@@ -212,14 +212,23 @@ footer > * {
 
 .site-map {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.site-map * {
-    padding: 1rem 0;
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
+.site-map div > div {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.site-map div > div:nth-child(2) {
+    margin-left: -0.5rem;
+}
+
+.site-map div img {
+    margin-bottom: -0.4rem;
+    margin-right: 1rem;
+    max-width: 22px;
+    max-height: 22px;
 }
 
 address {
@@ -227,22 +236,42 @@ address {
 }
 
 .country-selection {
-    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: 0 auto;
+    border-radius: 0.9rem;
+    transition: 0.15s ease-in-out;
+    padding: 0.4rem;
 }
 
-footer a:not(address a) {
+.country-selection span p {
+    margin: -0.1rem;
+}
+
+.country-selection:hover {
+    background-color: #be0000;
+}
+
+.country-selection:active {
+    background-color: #2c64ff;
+}
+
+.country-selection img {
+    max-width: 35px;
+    max-height: 20px;
+}
+
+footer a:not(address a),
+footer p {
     color: white;
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover:not(.country-selection) {
     text-decoration: underline;
 }
 
 .note {
     font-size: 1.0rem;
-}
-
-.copyright p {
-    color: white;
 }
