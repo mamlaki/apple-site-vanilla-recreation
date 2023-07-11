@@ -42,6 +42,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.6rem;
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.8);
@@ -58,15 +59,16 @@ p {
     max-height: 30px;
 }
 
-.search-icon {
-    max-width: 28px;
-    max-height: 28px;
+.search-icon,
+.shop-bag-icon {
+    max-width: 25px;
+    max-height: 25px;
 }
 
-.other-header-elements {
+.other-header-icons {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2.6rem;
 }
 
 .hamburger-menu div {
