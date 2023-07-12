@@ -1,7 +1,29 @@
-/* Variables / Psuedo */
+/* Variables / Psuedo / JS */
 :root {
-    --normal-black: rgba(0, 0, 0, 0.8);
-    --logo-black: rgb(51, 51, 51);
+    --text-black: rgba(0, 0, 0, 0.8);
+    --main-black: rgb(51, 51, 51);
+    --header-grey: rgba(244, 244, 244, 0.8);
+}
+
+.dom-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.vis-hidden {
+    opacity: 0;
+}
+
+
+.no-scroll {
+    height: 100%;
+    overflow: hidden;
 }
 
 
@@ -29,7 +51,7 @@ h2 {
 }
 
 p {
-    color: var(--normal-black);
+    color: var(--text-black);
     font-weight: lighter;
 }
 /* ------------- */
@@ -45,18 +67,76 @@ p {
     padding: 0.6rem;
     position: sticky;
     top: 0;
-    background-color: rgba(244, 244, 244, 0.8);
+    background-color: var(--header-grey);
     backdrop-filter: blur(10px);
     z-index: 4;
+}
+
+.nav-menu-header-bg {
+    background-color: #F4F4F4;
 }
 
 .main-header > * {
     margin: 0 1rem;
 }
 
+/* || Navigation */
+/* ------------- */
+.main-header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 5.6rem;    
+    margin-left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F4F4F4;
+}
+
+.main-header nav ul {
+    padding: 1rem;
+}
+
+.main-header nav ul li {
+    display: flex;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.main-header nav ul li span {
+    font-size: 2.4rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-right: 3rem;
+    transition: 0.1s ease-in-out;
+}
+
+.main-header nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration-color: transparent;
+    color: var(--text-black);
+    font-weight: bold;
+    font-size: 2.4rem;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+}
+
+.main-header nav ul li a:hover {
+    text-decoration-color: var(--text-black);
+}
+
+.main-header nav ul li a:hover + span {
+    margin-right: 1rem;
+}
+
+
+
+/* ------------- */
 .header-logo {
     max-width: 30px;
     max-height: 30px;
+    transition: 0.2s ease-in-out;
 }
 
 .search-icon,
@@ -74,18 +154,29 @@ p {
 .hamburger-menu div {
     width: 30px;
     height: 3px;
-    background-color: var(--logo-black);
+    background-color: var(--main-black);
     border-radius: 1rem;
     margin: 0.5rem 0;
+    /* position: absolute; */
+}
+
+.icon-container:last-child {
+    padding: 0.2rem 1rem;
+}
+
+.close-icon {
+    font-size: 3rem;
+    margin: 0;
 }
 
 .icon-container {
     padding: 1rem;
+    transition: 0.2s ease-in-out;
+    border-radius: 2rem;
 }
 
 .icon-container:hover {
     background-color: #EDEDED;
-    border-radius: 2rem;
     cursor: pointer;
 }
 /* ------------- */
