@@ -43,15 +43,21 @@ closeButton.addEventListener('click', () => {
 
 
 
-// || Show arrow on nav item hover
+// || Show arrow on nav item hover (if within the scope of the project)
 let navListItem = document.querySelectorAll('nav ul li')
 
 navListItem.forEach(listItem => {
-    listItem.addEventListener('mouseenter', () => {
-        listItem.children[1].classList.remove('vis-hidden')
-    })
-
-    listItem.addEventListener('mouseleave', () => {
-        listItem.children[1].classList.add('vis-hidden')
-    })
+    if (listItem.classList.contains('scope')) {
+        listItem.addEventListener('mouseenter', () => {
+            listItem.children[1].classList.remove('vis-hidden')
+        })
+    
+        listItem.addEventListener('mouseleave', () => {
+            listItem.children[1].classList.add('vis-hidden')
+        })
+    } else {
+        listItem.addEventListener('click', () => {
+            alert("Outside of the current project scope! Try again at a later date.")
+        })
+    }
 })

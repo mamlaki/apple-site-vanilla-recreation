@@ -130,8 +130,10 @@ p {
     margin-right: 1rem;
 }
 
-
-
+.main-header nav ul li:not(.scope),
+.main-header nav ul li:not(.scope) a:hover {
+    cursor: not-allowed;
+}
 /* ------------- */
 .header-logo {
     max-width: 30px;
@@ -161,7 +163,6 @@ p {
     background-color: var(--main-black);
     border-radius: 1rem;
     margin: 0.5rem 0;
-    /* position: absolute; */
 }
 
 .icon-container:last-child {
