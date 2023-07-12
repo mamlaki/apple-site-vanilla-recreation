@@ -139,6 +139,10 @@ p {
     transition: 0.2s ease-in-out;
 }
 
+.header-logo:hover {
+    filter: brightness(0.8);
+}
+
 .search-icon,
 .shop-bag-icon {
     max-width: 25px;
