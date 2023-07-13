@@ -44,9 +44,10 @@ closeButton.addEventListener('click', () => {
 
 
 // || Show arrow on nav item hover (if within the scope of the project)
-let navListItem = document.querySelectorAll('nav ul li')
+let navListItems = document.querySelectorAll('nav ul li')
+let navListItemsArray = [...navListItems]
 
-navListItem.forEach(listItem => {
+navListItemsArray.forEach(listItem => {
     if (listItem.classList.contains('scope')) {
         listItem.addEventListener('mouseenter', () => {
             listItem.children[1].classList.remove('vis-hidden')
@@ -56,8 +57,23 @@ navListItem.forEach(listItem => {
             listItem.children[1].classList.add('vis-hidden')
         })
     } else {
-        listItem.addEventListener('click', () => {
+        listItem.addEventListener('click', (e) => {
             alert("Outside of the current project scope! Try again at a later date.")
+            e.preventDefault()
+        })
+    }
+})
+
+
+// || Show alert if button is clicked that is outside of the current project scope
+let articles = document.querySelectorAll('.home section article')
+let articlesArray = [...articles]
+
+articlesArray.forEach(article => {
+    if (!article.classList.contains('in-scope')) {
+        article.addEventListener('click', (e) => {
+            alert("Outside of the current project scope! Try again at a later date.")
+            e.preventDefault()
         })
     }
 })
