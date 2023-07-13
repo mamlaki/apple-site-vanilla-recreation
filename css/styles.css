@@ -136,8 +136,7 @@ p {
 }
 /* ------------- */
 .header-logo {
-    max-width: 30px;
-    max-height: 30px;
+    width: 40px;
     transition: 0.2s ease-in-out;
 }
 

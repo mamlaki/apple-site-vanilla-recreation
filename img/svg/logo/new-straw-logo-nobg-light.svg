@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_2_00000150063249115399246970000007924991399653173154_" x="0" y="0" style="enable-background:new 0 0 819.6 850.7" version="1.1" viewBox="0 0 819.6 850.7">
+  <style>
+    .st0{fill:#fff}.st2{fill:#333}
+  </style>
+  <g id="Logo-Flat-DM">
+    <g id="Strawberry_Base">
+      <g id="Top">
+        <path d="m419.7 75.4-6.8 3.2c-13.1 6.2-26.2 1.9-29.3-9.7l-8.2-30.7c-3.1-11.6 5-26 18.1-32.2l6.8-3.2c13.1-6.2 26.2-1.9 29.3 9.7l8.2 30.6c3 11.6-5.1 26-18.1 32.3z" class="st0"/>
+        <ellipse cx="409.8" cy="78.8" class="st0" rx="215.3" ry="37.9"/>
+      </g>
+      <path id="Strawberry" d="M569.8 758.3c-71.1 123.2-248.9 123.2-320 0L137.4 563.6 25 369C-46.1 245.8 42.8 91.8 185 91.8h449.5c142.2 0 231.1 154 160 277.1L682.2 563.6 569.8 758.3z" class="st0"/>
+      <path d="M183.9 540.2c70.4 15.7 143.7 18 215.6 14.4 80.2-4 162-16 229.6-51.8" style="fill:none;stroke:#333;stroke-width:19;stroke-linecap:round;stroke-miterlimit:10"/>
+      <g id="Seeds">
+        <g id="Seeds_Left">
+          <ellipse cx="194.5" cy="234.1" class="st2" rx="20.3" ry="37.3"/>
+          <ellipse cx="194.5" cy="387.5" class="st2" rx="20.3" ry="37.3"/>
+          <ellipse cx="303.1" cy="308.7" class="st2" rx="20.3" ry="37.3"/>
+        </g>
+        <g id="Seeds_Right">
+          <ellipse cx="604.7" cy="385.4" class="st2" rx="20.3" ry="37.3"/>
+          <ellipse cx="604.7" cy="232" class="st2" rx="20.3" ry="37.3"/>
+          <ellipse cx="496.1" cy="310.8" class="st2" rx="20.3" ry="37.3"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
