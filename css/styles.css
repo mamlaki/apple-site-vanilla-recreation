@@ -306,11 +306,15 @@ p {
 .mini-header {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     padding: 0 2rem;
     background-color: var(--header-grey);
     position: sticky;
-    border-bottom: 1px solid #e8e8e8;
+    z-index: 2;
+}
+
+.dropdown-border-bottom {
+    border-bottom: 5px solid var(--main-green);
+    transition: all 0.1s ease;
 }
 
 .mini-header h2 {
@@ -349,12 +353,28 @@ p {
     transform: rotate(180deg);
 }
 
+.strawbook-buy-container {
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+}
+
 .strawbook-buy-dropdown {
     padding: 1rem;
+    margin-top: -22rem;
     padding-left: 3rem;
-    margin: 0;
     text-align: left;
     list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.dropdown-slide {
+    margin-top: 0;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .strawbook-buy-dropdown li {
@@ -387,11 +407,9 @@ p {
     margin: 0;
 }
 
-
 .secondary-buttons:hover {
     background-color: rgb(40, 225, 43);
 }
-
 
 
 

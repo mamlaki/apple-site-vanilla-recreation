@@ -1,8 +1,5 @@
 // || General Functions
-const toggleClass = (element, className) => {
-    element.classList.toggle(className)
-}
-
+import toggleClass from "./toggleClass.js"
 
 
 // || Toggle hidden class on mobile nav element(s)
@@ -42,7 +39,6 @@ closeButton.addEventListener('click', () => {
 })
 
 
-
 // || Show arrow on nav item hover (if within the scope of the project)
 let navListItems = document.querySelectorAll('nav ul li')
 let navListItemsArray = [...navListItems]
@@ -78,24 +74,34 @@ articlesArray.forEach(article => {
     }
 })
 
+
 // || Show buy dropdown menu on arrow click and close if the user scrolls
-let dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
-let dropdownIcon = document.querySelector('.mini-header .icon-container')
+if (window.location.href.indexOf("learn-more") > -1) {
+    let dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
+    let dropdownIcon = document.querySelector('.mini-header .icon-container')
+    let dropdownContainer = document.querySelector('.strawbook-buy-container')
+    let miniHeader = document.querySelector('.mini-header')
 
 
-setInterval(()=>{
-    if (!dropdownMenu.classList.contains('dom-hidden')) {
-        window.onscroll = () => {
-            dropdownMenu.classList.add('dom-hidden')
-            dropdownIcon.classList.remove('dropdown-rotate')
-        }    
-    }
-}, 3500)
+    setInterval(()=>{
+        if (!dropdownMenu.classList.contains('dom-hidden')) {
+            window.onscroll = () => {
+                // dropdownMenu.classList.add('dom-hidden')
+                dropdownMenu.classList.remove('dropdown-slide')
+                dropdownContainer.classList.remove('dropdown-border-bottom')
+                miniHeader.classList.add('dropdown-border-bottom')
+                dropdownIcon.classList.remove('dropdown-rotate')
+            }    
+        }
+    }, 3500)
 
-dropdownIcon.addEventListener('click', () => {
-    toggleClass(dropdownMenu, 'dom-hidden')
-    toggleClass(dropdownIcon, 'dropdown-rotate')
-})
+    dropdownIcon.addEventListener('click', () => {
+        toggleClass(dropdownMenu, 'dropdown-slide')
+        toggleClass(dropdownIcon, 'dropdown-rotate')
+        toggleClass(dropdownContainer, 'dropdown-border-bottom')
+        toggleClass(miniHeader, 'dropdown-border-bottom')
+    })    
+}
 
 
 
