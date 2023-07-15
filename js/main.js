@@ -1,7 +1,7 @@
 // || General Functions
-import toggleClass from "./toggleClass.js"
-import addClass from "./addClass.js"
-import removeClass from "./removeClass.js"
+import toggleClass from "./components/toggleClass.js"
+import addClass from "./components/addClass.js"
+import removeClass from "./components/removeClass.js"
 
 let learnMoreContent = document.querySelector('.learn-more-content-container')
 
