@@ -77,3 +77,33 @@ articlesArray.forEach(article => {
         })
     }
 })
+
+// || Show buy dropdown menu on arrow click and close if the user scrolls
+let dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
+let dropdownIcon = document.querySelector('.mini-header .icon-container')
+
+
+setInterval(()=>{
+    if (!dropdownMenu.classList.contains('dom-hidden')) {
+        window.onscroll = () => {
+            dropdownMenu.classList.add('dom-hidden')
+            dropdownIcon.classList.remove('dropdown-rotate')
+        }    
+    }
+}, 3500)
+
+dropdownIcon.addEventListener('click', () => {
+    toggleClass(dropdownMenu, 'dom-hidden')
+    toggleClass(dropdownIcon, 'dropdown-rotate')
+})
+
+
+
+
+
+
+
+
+
+
+
