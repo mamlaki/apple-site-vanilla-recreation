@@ -1,6 +1,9 @@
 // || General Functions
 import toggleClass from "./toggleClass.js"
+import addClass from "./addClass.js"
+import removeClass from "./removeClass.js"
 
+let learnMoreContent = document.querySelector('.learn-more-content-container')
 
 // || Toggle hidden class on mobile nav element(s)
 let hamburgerMenu = document.querySelector('.icon-container:nth-child(3)')
@@ -86,11 +89,11 @@ if (window.location.href.indexOf("learn-more") > -1) {
     setInterval(()=>{
         if (!dropdownMenu.classList.contains('dom-hidden')) {
             window.onscroll = () => {
-                // dropdownMenu.classList.add('dom-hidden')
-                dropdownMenu.classList.remove('dropdown-slide')
-                dropdownContainer.classList.remove('dropdown-border-bottom')
-                miniHeader.classList.add('dropdown-border-bottom')
-                dropdownIcon.classList.remove('dropdown-rotate')
+                removeClass(dropdownMenu, 'dropdown-slide')
+                removeClass(dropdownContainer, 'dropdown-border-bottom')
+                addClass(miniHeader, 'dropdown-border-bottom')
+                removeClass(dropdownIcon, 'dropdown-rotate')
+                removeClass(learnMoreContent, 'blur')
             }    
         }
     }, 3500)
@@ -100,6 +103,7 @@ if (window.location.href.indexOf("learn-more") > -1) {
         toggleClass(dropdownIcon, 'dropdown-rotate')
         toggleClass(dropdownContainer, 'dropdown-border-bottom')
         toggleClass(miniHeader, 'dropdown-border-bottom')
+        toggleClass(learnMoreContent, 'blur')
     })    
 }
 
