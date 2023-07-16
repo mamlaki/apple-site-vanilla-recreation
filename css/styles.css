@@ -3,6 +3,8 @@
     --text-black: rgba(0, 0, 0, 0.8);
     --main-black: rgb(51, 51, 51);
     --header-grey: rgba(244, 244, 244, 0.8);
+    --header-grey-no-alpha: rgb(244, 244, 244);
+    --header-grey-no-alpha-white-tint: rgb(246, 246, 246);
     --main-green: rgb(0, 197, 3);
 }
 
@@ -358,7 +360,7 @@ p {
 
 .strawbook-buy-dropdown {
     margin-top: 0;
-    background-color: var(--header-grey);
+    background-color: var(--header-grey-no-alpha-white-tint);
     text-align: left;
     list-style: none;
     position: absolute;
@@ -423,12 +425,73 @@ p {
     background-color: rgb(40, 225, 43);
 }
 
-.strawbook-video video {
+/* .strawbook-video video {
     width: 100%;
     height: 400px;
     object-fit: cover;
+} */
+
+.learn-more-content-container {
+    padding: 8rem;
 }
 
+.main-info {
+    text-align: left;
+}
+
+.main-info img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.main-info .title h2,
+.main-info .title p {
+    font-size: 4rem;
+    line-height: 0.2;
+}
+
+.main-info h2,
+.main-info p {
+    color: rgba(0, 0, 0, 0.488);
+    font-weight: bold;
+}
+
+.main-info p,
+.main-info .other-details a {
+    font-size: 2rem;
+}
+
+.main-info .other-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-info .other-details a {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.main-info .other-details a p {
+    font-weight: lighter;
+    margin-bottom: 2rem;
+    color: blue;
+}
+
+.main-info .other-details a:hover {
+    text-decoration: underline blue;
+    text-underline-offset: 0.2rem;
+}
+
+.main-info .other-details a svg {
+    width: 20px;
+    overflow: visible;
+}
+
+.color-emphasis {
+    color: var(--text-black);
+}
 
 /* || Footer */
 footer {
