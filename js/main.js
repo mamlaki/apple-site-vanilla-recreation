@@ -3,19 +3,19 @@ import toggleClass from "./components/toggleClass.js"
 import addClass from "./components/addClass.js"
 import removeClass from "./components/removeClass.js"
 
-let learnMoreContent = document.querySelector('.learn-more-content-container')
+const learnMoreContent = document.querySelector('.learn-more-content-container')
 
 // || Toggle hidden class on mobile nav element(s)
-let hamburgerMenu = document.querySelector('.icon-container:nth-child(3)')
-let closeButton = document.querySelector('.icon-container:last-child')
+const hamburgerMenu = document.querySelector('.icon-container:nth-child(3)')
+const closeButton = document.querySelector('.icon-container:last-child')
 
 const HideShowToggleNavElements = () => {
     // Variables
-    let header = document.querySelector('.main-header')
+    const header = document.querySelector('.main-header')
     // let headerIcons = document.querySelectorAll('.icon-container:not(.icon-container:nth-child(3))')
-    let headerIcons = document.querySelectorAll('.icon-container:not(.icon-container:nth-child(3)):not(.icon-container:last-child)')
-    let mobileNav = document.querySelector('nav')
-    let logo = document.querySelector('.header-logo')
+    const headerIcons = document.querySelectorAll('.icon-container:not(.icon-container:nth-child(3)):not(.icon-container:last-child)')
+    const mobileNav = document.querySelector('nav')
+    const logo = document.querySelector('.header-logo')
     
     // Class Toggle Function
     toggleClass(mobileNav, 'dom-hidden')
@@ -43,8 +43,8 @@ closeButton.addEventListener('click', () => {
 
 
 // || Show arrow on nav item hover (if within the scope of the project)
-let navListItems = document.querySelectorAll('nav ul li')
-let navListItemsArray = [...navListItems]
+const navListItems = document.querySelectorAll('nav ul li')
+const navListItemsArray = [...navListItems]
 
 navListItemsArray.forEach(listItem => {
     if (listItem.classList.contains('scope')) {
@@ -65,8 +65,8 @@ navListItemsArray.forEach(listItem => {
 
 
 // || Show alert if button is clicked that is outside of the current project scope
-let articles = document.querySelectorAll('.home section article')
-let articlesArray = [...articles]
+const articles = document.querySelectorAll('.home section article')
+const articlesArray = [...articles]
 
 articlesArray.forEach(article => {
     if (!article.classList.contains('in-scope')) {
@@ -80,18 +80,15 @@ articlesArray.forEach(article => {
 
 // || Show buy dropdown menu on arrow click and close if the user scrolls
 if (window.location.href.indexOf("learn-more") > -1) {
-    let dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
-    let dropdownIcon = document.querySelector('.mini-header .icon-container')
-    let dropdownContainer = document.querySelector('.strawbook-buy-container')
-    let miniHeader = document.querySelector('.mini-header')
+    const dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
+    const dropdownIcon = document.querySelector('.mini-header .icon-container')
+    const miniHeader = document.querySelector('.mini-header')
 
 
     setInterval(()=>{
         if (!dropdownMenu.classList.contains('dom-hidden')) {
             window.onscroll = () => {
-                removeClass(dropdownMenu, 'dropdown-slide')
-                removeClass(dropdownContainer, 'dropdown-border-bottom')
-                addClass(miniHeader, 'dropdown-border-bottom')
+                removeClass(dropdownMenu, 'slide')
                 removeClass(dropdownIcon, 'dropdown-rotate')
                 removeClass(learnMoreContent, 'blur')
             }    
@@ -99,18 +96,11 @@ if (window.location.href.indexOf("learn-more") > -1) {
     }, 3500)
 
     dropdownIcon.addEventListener('click', () => {
-        toggleClass(dropdownMenu, 'dropdown-slide')
+        toggleClass(dropdownMenu, 'slide')    
         toggleClass(dropdownIcon, 'dropdown-rotate')
-        toggleClass(dropdownContainer, 'dropdown-border-bottom')
-        toggleClass(miniHeader, 'dropdown-border-bottom')
         toggleClass(learnMoreContent, 'blur')
     })    
 }
-
-
-
-
-
 
 
 
