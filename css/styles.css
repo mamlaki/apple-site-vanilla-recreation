@@ -59,7 +59,12 @@ p {
     font-weight: lighter;
 }
 
-
+.learn-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
 /* || Header */
 .main-header {
@@ -433,6 +438,7 @@ footer {
     color: white;
     font-weight: bold;
     text-align: center;
+    margin-top: auto;
 }
 
 footer > * {
