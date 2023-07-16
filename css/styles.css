@@ -59,7 +59,7 @@ p {
     font-weight: lighter;
 }
 
-.learn-container {
+.container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
