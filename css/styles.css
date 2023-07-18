@@ -438,14 +438,16 @@ p {
 } */
 
 
-.personalize .interactive-img-container {
+.personalize .interactive-img-container,
+.performance .interactive-img-container {
     background-color: ghostwhite;
     padding: 2rem;
     border-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
 .learn-more-content-container {
-    padding: 2rem;
+    padding: 6rem;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -460,7 +462,8 @@ p {
 }
 
 .main-info img,
-.design img {
+.design img,
+.performance img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -472,17 +475,18 @@ p {
     line-height: 0.2;
 }
 
-.learn-more-content-container .design .title h2 {
+.learn-more-content-container .design .title h2,
+.performance .title h2 {
     line-height: 1.5;
 }
 
 .learn-more-content-container h2,
-.learn-more-content-container p {
+.learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p) {
     color: rgba(0, 0, 0, 0.488);
     font-weight: bold;
 }
 
-.learn-more-content-container p,
+.learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p),
 .learn-more-content-container a {
     font-size: 2rem;
 }
@@ -571,10 +575,62 @@ p {
     cursor: pointer;
 }
 
-/* .color-option-circle:active {
-    transform: scale(0.9);
-    border: 1px solid blue;
-} */
+.s1-chip {
+    width: 12rem;
+    margin-top: 5rem;
+}
+
+.chip-stats {
+    line-height: 0.1;
+}
+
+.chip-stat {
+    margin: 5rem 0;
+}
+
+.chip-stat-number {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.learn-more-s1-button-container {
+    margin: 5rem 0;
+    max-width: 20rem;
+}
+
+.learn-more-s1-button:hover {
+    background-color: var(--main-green);
+}
+
+.learn-more-s1-button:hover p {
+    color: white;
+}
+
+.learn-more-s1-button:hover svg circle,
+.learn-more-s1-button:hover svg path {
+    stroke: white !important;
+}
+
+.learn-more-s1-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    border: 3px solid var(--main-green);
+    padding: 0 1rem;
+    border-radius: 3rem;
+    justify-content: center;
+}
+
+.learn-more-s1-button p {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.learn-more-s1-button svg {
+    width: 20px;
+    overflow: visible;
+}
 
 /* || Footer */
 footer {
