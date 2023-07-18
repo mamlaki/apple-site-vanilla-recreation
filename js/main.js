@@ -78,12 +78,12 @@ articlesArray.forEach(article => {
 })
 
 
+
+// || Code below is only for the learn-more page
 // || Show buy dropdown menu on arrow click and close if the user scrolls
 if (window.location.href.indexOf("learn-more") > -1) {
     const dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
     const dropdownIcon = document.querySelector('.mini-header .icon-container')
-    const miniHeader = document.querySelector('.mini-header')
-
 
     setInterval(()=>{
         if (!dropdownMenu.classList.contains('dom-hidden')) {
@@ -100,7 +100,42 @@ if (window.location.href.indexOf("learn-more") > -1) {
         toggleClass(dropdownIcon, 'dropdown-rotate')
         toggleClass(learnMoreContent, 'blur')
     })    
+
+
+
+    // || Show color option label when selected but only the label of the selected option, if another option is selected, hide the previous label and show the new one.
+    const colorOptions = document.querySelectorAll('.color-option')
+    const colorOptionsArray = [...colorOptions]
+
+    colorOptionsArray.forEach(colorOption => {
+        colorOption.addEventListener('click', () => {
+            const colorOptionLabel = colorOption.children[1]
+            colorOptionsArray.forEach(colorOption => {
+                const colorOptionLabel = colorOption.children[1]
+                addClass(colorOptionLabel, 'vis-hidden')
+            })
+            toggleClass(colorOptionLabel, 'vis-hidden')
+        })
+    })
+
+
+
+    // || The :checked css class is added when the user clicks the div containing the radio button.
+    const radioButtons = document.querySelectorAll('.radio-button')
+    const radioButtonsArray = [...radioButtons]
+    
+    radioButtonsArray.forEach(radioButton => {
+        radioButton.addEventListener('click', () => {
+            const radioButtonInput = radioButton.children[0]
+            radioButtonInput.checked = true
+        })
+    })
 }
+
+
+
+
+
 
 
 
