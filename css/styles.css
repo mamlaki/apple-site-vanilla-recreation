@@ -6,6 +6,7 @@
     --header-grey-no-alpha: rgb(244, 244, 244);
     --header-grey-no-alpha-white-tint: rgb(246, 246, 246);
     --main-green: rgb(0, 197, 3);
+    --main-gray: rgba(0, 0, 0, 0.488);
 }
 
 .dom-hidden {
@@ -487,7 +488,7 @@ p {
 
 .learn-more-content-container h2,
 .learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p):not(.buy-now-button p) {
-    color: rgba(0, 0, 0, 0.488);
+    color: var(--main-gray);
     font-weight: bold;
 }
 
@@ -734,81 +735,71 @@ p {
 
 /* || Footer */
 footer {
-    font-size: 1.4rem;
-    padding: 1rem;
-    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--text-black);
+    padding: 8rem 3rem;
+}
+
+footer > *:not(.site-map):not(.copyright) {
+    margin-bottom: 3rem;
+}
+
+.footer-logo img {
+    max-width: 128px;
+}
+
+footer hr {
+    width: 60%;
+    border: 1.5px solid gray;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.site-map-container .site-map {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.site-map-container .site-map li {
+    margin: 3rem 0;
+}
+
+.site-map-container .site-map li a {
+    text-decoration: none;
     color: white;
     font-weight: bold;
-    text-align: center;
-    margin-top: auto;
+    text-transform: uppercase;
 }
 
-footer > * {
-    margin: 3rem;
-}
-
-.site-map {
-    display: flex;
-    justify-content: center;
-}
-
-.site-map div > div {
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.site-map div > div:nth-child(2) {
-    margin-left: -0.5rem;
-}
-
-.site-map div img {
-    margin-bottom: -0.4rem;
-    margin-right: 1rem;
-    max-width: 22px;
-    max-height: 22px;
-}
-
-address {
-    font-style: normal;
-}
-
-.country-selection {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    margin: 0 auto;
-    border-radius: 0.9rem;
-    transition: 0.15s ease-in-out;
-    padding: 0.4rem;
-}
-
-.country-selection span p {
-    margin: -0.1rem;
-}
-
-.country-selection:hover {
-    background-color: #be0000;
-}
-
-.country-selection:active {
-    background-color: #2c64ff;
-}
-
-.country-selection img {
-    max-width: 35px;
-    max-height: 20px;
-}
-
-footer a:not(address a),
-footer p {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover:not(.country-selection) {
+.site-map-container .site-map li a:hover {
     text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    color: var(--main-green)
 }
 
-.note {
-    font-size: 1.0rem;
+.connect-container .connect {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 4rem;
+}
+
+.connect-container .connect li a svg {
+    transform: scale(1.5);
+    color: white;
+}
+
+.connect-container .connect li a svg:hover {
+    color: var(--main-green);
+}
+
+.copyright {
+    margin: 0;
+}
+
+.copyright p {
+    color: white;
 }
