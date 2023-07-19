@@ -447,9 +447,12 @@ p {
 }
 
 .learn-more-content-container {
-    padding: 6rem;
     margin: 0 auto;
     overflow: hidden;
+}
+
+.learn-more-content-container > * {
+    padding: 3rem;
 }
 
 .learn-more-content-container section {
@@ -463,7 +466,8 @@ p {
 
 .main-info img,
 .design img,
-.performance img {
+.performance img,
+.new-to-straw img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -622,7 +626,8 @@ p {
     justify-content: center;
 }
 
-.learn-more-s1-button p {
+.learn-more-s1-button p,
+.new-to-straw .info-gallery article p {
     font-weight: bold;
     font-size: 1.6rem;
 }
@@ -630,6 +635,73 @@ p {
 .learn-more-s1-button svg {
     width: 20px;
     overflow: visible;
+}
+
+.new-to-straw {
+    background-color: ghostwhite;
+}
+
+.new-to-straw .info-gallery-container {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.new-to-straw .info-gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.new-to-straw .info-gallery-container .info-gallery {
+    display: flex;
+    gap: 8rem;
+    justify-content: flex-start;
+    padding: 1rem 100vw 1rem 100vw;
+}
+
+.new-to-straw .info-gallery-container .info-gallery article {
+    scroll-snap-align: center;
+}
+
+.new-to-straw .info-gallery-container .info-gallery article img {
+    width: 250px;
+    height: 300px;
+}
+
+.new-to-straw .gallery-arrow-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.new-to-straw .gallery-arrow-buttons div {
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.145);
+    font-size: 3rem;
+    color: rgb(128, 128, 128);
+    transition: 0.3s ease-in-out;
+}
+
+.new-to-straw .gallery-arrow-buttons div:hover {
+    cursor: pointer;
+}
+
+.new-to-straw .gallery-arrow-buttons div:first-of-type {
+    transform: rotate(270deg);
+}
+
+.new-to-straw .gallery-arrow-buttons div:last-of-type {
+    transform: rotate(90deg);
+}
+
+.new-to-straw .gallery-arrow-buttons div span {
+    margin-top: 0.3rem;
 }
 
 /* || Footer */

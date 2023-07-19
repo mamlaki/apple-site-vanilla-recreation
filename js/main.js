@@ -130,7 +130,24 @@ if (window.location.href.indexOf("learn-more") > -1) {
             radioButtonInput.checked = true
         })
     })
+
+    // || When the user clicks on one of the gallery-arrow-buttons divs, the gallery will slide to the left or right depending on which arrow was clicked.
+    const galleryArrowButtons = document.querySelectorAll('.gallery-arrow-buttons div')
+    const galleryArrowButtonsArray = [...galleryArrowButtons]
+    const gallery = document.querySelector('.info-gallery-container')
+
+    galleryArrowButtonsArray.forEach(galleryArrowButton => {
+        galleryArrowButton.addEventListener('click', () => {
+            if (galleryArrowButton.classList.contains('gallery-arrow-buttons-left')) {
+                gallery.scrollLeft -= 300
+            } else {
+                gallery.scrollLeft += 300
+            }
+        })
+    })
 }
+
+
 
 
 
