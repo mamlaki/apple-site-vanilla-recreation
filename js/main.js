@@ -145,6 +145,28 @@ if (window.location.href.indexOf("learn-more") > -1) {
             }
         })
     })
+
+    // || Make the sections within the .learn-more-content-container fade in when the user scrolls to them.
+    const learnMoreContentSections = document.querySelectorAll('.learn-more-content-container section')
+    const learnMoreContentSectionsArray = [...learnMoreContentSections]
+
+    const fadeInSections = () => {
+        learnMoreContentSectionsArray.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top
+            const sectionBottom = section.getBoundingClientRect().bottom
+            const sectionHeight = section.getBoundingClientRect().height
+
+            if (sectionTop < window.innerHeight - sectionHeight / 2 && sectionBottom > sectionHeight / 2) {
+                removeClass(section, 'blur')
+            } else {
+                addClass(section, 'blur')
+            }
+        })
+    }
+
+    window.addEventListener('scroll', () => {
+        fadeInSections()
+    })
 }
 
 
