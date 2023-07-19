@@ -487,7 +487,7 @@ p {
 }
 
 .learn-more-content-container h2,
-.learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p):not(.buy-now-button p) {
+.learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p):not(.buy-now-button p):not(.other-details a p) {
     color: var(--main-gray);
     font-weight: bold;
 }
