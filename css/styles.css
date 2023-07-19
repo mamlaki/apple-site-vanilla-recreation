@@ -467,7 +467,8 @@ p {
 .main-info img,
 .design img,
 .performance img,
-.new-to-straw img {
+.new-to-straw img,
+.buy-now img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -485,7 +486,7 @@ p {
 }
 
 .learn-more-content-container h2,
-.learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p) {
+.learn-more-content-container p:not(.chip-stat-number):not(.learn-more-s1-button p):not(.buy-now-button p) {
     color: rgba(0, 0, 0, 0.488);
     font-weight: bold;
 }
@@ -703,6 +704,33 @@ p {
 .new-to-straw .gallery-arrow-buttons div span {
     margin-top: 0.3rem;
 }
+
+.buy-now-button {
+    border: 3px solid var(--main-green);
+    border-radius: 10rem;
+    width: 15rem;
+    text-align: center;
+    margin: 5rem auto 0 auto;
+}
+
+.buy-now-button a {
+    text-decoration: none;
+}
+
+.buy-now-button a p {
+    font-weight: bold;
+}
+
+.buy-now-button:hover {
+    background-color: var(--main-green);
+    cursor: pointer;
+}
+
+.buy-now-button:hover p {
+    color: white;
+}
+
+
 
 /* || Footer */
 footer {
