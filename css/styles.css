@@ -57,9 +57,9 @@ h2 {
     color: rgba(0, 0, 0, 0.9);
 }
 
-h2 {
+/* h2 {
     font-size: 3rem;
-}
+} */
 
 p {
     color: var(--text-black);
@@ -452,7 +452,8 @@ p {
     overflow: hidden;
 }
 
-.learn-more-content-container > * {
+.learn-more-content-container > *,
+.buy-content-container > *  {
     padding: 3rem;
 }
 
@@ -469,7 +470,8 @@ p {
 .design img,
 .performance img,
 .new-to-straw img,
-.buy-now img {
+.buy-now img,
+.strawbook-details img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -732,6 +734,106 @@ p {
 }
 
 
+/* || Main - StrawBook: Buy Page */
+.strawbook-selection {
+    
+}
+
+.strawbook-selection button {
+    background-color: white;
+    border: 2px solid var(--text-black);
+    border-radius: 2rem;
+    width: 20rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.strawbook-selection button:hover {
+    cursor: pointer;
+}
+
+.strawbook-selection button p:first-of-type {
+    font-weight: bold;
+}
+
+.strawbook-selection button[aria-checked="true"] {
+    border-color: blue;
+}
+
+.strawbook-details .color-selector {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+}
+
+.strawbook-details .selected-color {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+.new-tag {
+    background-color:hsla(0, 100%, 85%, 1);
+    color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.strawbook-details .chip-graphic img {
+    margin-top: 4rem;
+    width: 6rem;
+    border-radius: 1rem;
+}
+
+.strawbook-details .main-specs h2 {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.strawbook-details .secondary-specs {
+    list-style: none;
+    padding: 0;
+}
+
+.strawbook-details .secondary-specs  li {
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.strawbook-details .price {
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.strawbook-details .select-button,
+.strawbook-details .bookmark-button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-green);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.strawbook-details .select-button:hover {
+    background-color: rgb(40, 225, 43);
+}
+
+.strawbook-details .bookmark-button {
+    border: none;
+    width: 100%;
+    background-color: blue;
+    margin-top: 2rem;
+}
+
+.strawbook-details .bookmark-button:hover {
+    background-color: #3131ff;
+    cursor: pointer;
+}
 
 /* || Footer */
 footer {
@@ -800,6 +902,6 @@ footer hr {
     margin: 0;
 }
 
-.copyright p {
+.copyright span {
     color: white;
 }

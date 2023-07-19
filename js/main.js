@@ -78,31 +78,29 @@ articlesArray.forEach(article => {
 })
 
 
+// || Show buy dropdown menu on arrow click and close if the user scrolls
+const dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
+const dropdownIcon = document.querySelector('.mini-header .icon-container')
+
+setInterval(()=>{
+    if (!dropdownMenu.classList.contains('dom-hidden')) {
+        window.onscroll = () => {
+            removeClass(dropdownMenu, 'slide')
+            removeClass(dropdownIcon, 'dropdown-rotate')
+            removeClass(learnMoreContent, 'blur')
+        }    
+    }
+}, 3500)
+
+dropdownIcon.addEventListener('click', () => {
+    toggleClass(dropdownMenu, 'slide')    
+    toggleClass(dropdownIcon, 'dropdown-rotate')
+    toggleClass(learnMoreContent, 'blur')
+})
+
 
 // || Code below is only for the learn-more page
-// || Show buy dropdown menu on arrow click and close if the user scrolls
 if (window.location.href.indexOf("learn-more") > -1) {
-    const dropdownMenu = document.querySelector('.strawbook-buy-dropdown')
-    const dropdownIcon = document.querySelector('.mini-header .icon-container')
-
-    setInterval(()=>{
-        if (!dropdownMenu.classList.contains('dom-hidden')) {
-            window.onscroll = () => {
-                removeClass(dropdownMenu, 'slide')
-                removeClass(dropdownIcon, 'dropdown-rotate')
-                removeClass(learnMoreContent, 'blur')
-            }    
-        }
-    }, 3500)
-
-    dropdownIcon.addEventListener('click', () => {
-        toggleClass(dropdownMenu, 'slide')    
-        toggleClass(dropdownIcon, 'dropdown-rotate')
-        toggleClass(learnMoreContent, 'blur')
-    })    
-
-
-
     // || Show color option label when selected but only the label of the selected option, if another option is selected, hide the previous label and show the new one.
     const colorOptions = document.querySelectorAll('.color-option')
     const colorOptionsArray = [...colorOptions]
@@ -168,6 +166,30 @@ if (window.location.href.indexOf("learn-more") > -1) {
         fadeInSections()
     })
 }
+
+// || give the .strawbook-selection button the aria-checked attribute when clicked
+const strawbookSelectionButtons = document.querySelectorAll('.strawbook-selection button')
+const strawbookSelectionButtonsArray = [...strawbookSelectionButtons]
+
+strawbookSelectionButtonsArray.forEach(button => {
+    button.addEventListener('click', () => {
+        strawbookSelectionButtonsArray.forEach(button => {
+            button.setAttribute('aria-checked', 'false')
+        })
+        button.setAttribute('aria-checked', 'true')
+    })
+})
+
+// || change the text content of .selected-color to the text content of the color-option id with the checked attribute
+const selectedColor = document.querySelector('.selected-color')
+const colorOptionsInputs = document.querySelectorAll('.color-option input')
+const colorOptionsInputsArray = [...colorOptionsInputs]
+
+colorOptionsInputsArray.forEach(input => {
+    input.addEventListener('click', () => {
+        selectedColor.textContent = input.value
+    })
+})
 
 
 
