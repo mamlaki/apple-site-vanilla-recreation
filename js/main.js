@@ -191,7 +191,33 @@ colorOptionsInputsArray.forEach(input => {
     })
 })
 
+// || change text inside of the .box-items.desc span depending on what radio button inside of the .box-items-selection list is checked. The text will be determined by the data-name attribute of the radio button.
+const boxItemsSelectionInputs = document.querySelectorAll('.box-items-selection input')
+const boxItemsSelectionInputsArray = [...boxItemsSelectionInputs]
+const boxItemsDesc = document.querySelector('.box-items-desc')
 
+boxItemsSelectionInputsArray.forEach(input => {
+    input.addEventListener('click', () => {
+        boxItemsDesc.textContent = input.dataset.name
+    })
+})
+
+// || add or remove the vis-hidden class from the box-items list items depending on which radio button inside of the .box-items-selection list is checked.
+
+const boxItems = document.querySelectorAll('.box-items li')
+const boxItemsArray = [...boxItems]
+
+boxItemsSelectionInputsArray.forEach(input => {
+    input.addEventListener('click', () => {
+        boxItemsArray.forEach(item => {
+            if (item.dataset.name === input.dataset.name) {
+                removeClass(item, 'vis-hidden')
+            } else {
+                addClass(item, 'vis-hidden')
+            }
+        })
+    })
+})
 
 
 
